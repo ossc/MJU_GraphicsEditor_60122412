@@ -1,7 +1,10 @@
 package frames;
+import java.awt.BasicStroke;
 import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.util.Vector;
@@ -9,10 +12,10 @@ import java.util.Vector;
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputListener;
 
-import constants.GConstants;
 import constants.GConstants.EAnchors;
 import shapes.GShape;
 
+import javax.swing.ImageIcon;
 
 public class GDrawingPanel extends JPanel {
 	// attributes
@@ -111,7 +114,7 @@ public class GDrawingPanel extends JPanel {
 					this.setCursor(new Cursor(Cursor.W_RESIZE_CURSOR));
 					return;
 				case RR:
-					this.setCursor(new Cursor(Cursor.HAND_CURSOR));
+					this.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("rsc/rotateicon.png").getImage(),new Point(15,15),"CUSTOM_CURSOR"));
 					return;
 				case MM:
 					this.setCursor(new Cursor(Cursor.MOVE_CURSOR));

@@ -1,5 +1,6 @@
 package shapes;
 
+import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 import java.awt.geom.Line2D;
 
@@ -18,9 +19,10 @@ public class GLine extends GShape {
 	}
 	@Override
 	public void keepDrawing(int x, int y, Graphics2D g2D) {
+		BasicStroke stroke = new BasicStroke(2.0f);	// 패널 위에 굵기가 2인 선을 그린다.
+		g2D.setStroke(stroke);
 		this.draw(g2D);
 		this.line.setLine(this.line.getX1(), this.line.getY1(), x, y);
 		this.draw(g2D);
 	}
-
 }

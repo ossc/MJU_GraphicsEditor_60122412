@@ -7,8 +7,6 @@ import java.util.Vector;
 
 import constants.GConstants.EAnchors;
 
-
-
 public class Anchors extends Vector<Ellipse2D.Double>{
 	private static final long serialVersionUID = 1L;
 	public final static int ANCHORWIDTH = 8;
